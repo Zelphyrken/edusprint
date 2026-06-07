@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSprint - Belajar Cepat, Paham Tepat</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">EduSprint</div>
+    <div class="menu">
+      <a href="#about">Tentang</a>
+      <a href="#materi">Materi</a>
+      <a href="#contact">Kontak</a>
+    </div>
+  </nav>
+
+  <section class="hero reveal">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Belajar Cepat,<br>Paham Tepat</h1>
+        <p>
+          Platform edukasi modern yang membantu pelajar memahami materi
+          dengan lebih mudah melalui pembelajaran singkat dan interaktif.
+        </p>
+        <a href="belajar.html" class="btn">Mulai Belajar</a>
+      </div>
+      <div class="hero-image">
+        <img src="./help-people-learn.jpg" alt="Orang sedang belajar bersama">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section reveal">
+    <h2>Tentang EduSprint</h2>
+    <p style="max-width: 800px; margin: 0 auto 40px auto; text-align: center;">
+      EduSprint merupakan website edukasi yang dirancang sebagai media pembelajaran digital dengan tampilan yang sederhana, 
+      modern, dan mudah digunakan. Kami merangkum materi kompleks menjadi ringkasan yang nyaman dibaca.
+    </p>
+    
+    <div class="about-features">
+      <div class="feature-card">
+        <h3>🚀 Cepat & Ringkas</h3>
+        <p>Materi langsung pada intinya tanpa bertele-tele.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🎮 Interaktif</h3>
+        <p>Terdapat live-code dan kuis untuk menguji pemahaman.</p>
+      </div>
+      <div class="feature-card">
+        <h3>✨ Modern UI</h3>
+        <p>Desain ramah mata yang membuat belajar tidak membosankan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="materi" class="section reveal">
+    <h2>Materi Unggulan</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Klik kartu di bawah untuk melihat contoh materi.</p>
+
+    <div class="cards">
+      <div class="card clickable" onclick="openModal('modal-html')">
+        <span>💻</span>
+        <h3>HTML Dasar</h3>
+        <p>Mempelajari struktur dasar website.</p>
+      </div>
+
+      <div class="card clickable" onclick="openModal('modal-css')">
+        <span>🎨</span>
+        <h3>CSS Dasar</h3>
+        <p>Mengatur tampilan agar lebih menarik.</p>
+      </div>
+
+      <div class="card clickable" onclick="openModal('modal-js')">
+        <span>⚡</span>
+        <h3>JavaScript Dasar</h3>
+        <p>Menambahkan interaksi pada website.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects" class="section reveal">
+  <h2>Tutorial Proyek</h2>
+  <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">
+    Terapkan ilmu yang kamu pelajari dengan membangun proyek nyata langkah demi langkah.
+  </p>
+
+  <div class="projects-grid">
+    
+    <div class="project-card">
+      <div class="project-badge">Pemula</div>
+      <h3>🌐 Portofolio Pribadi</h3>
+      <p>Bikin halaman website pribadi yang keren untuk memamerkan karya dan keahlian tokomu menggunakan struktur HTML dan dekorasi CSS.</p>
+      <div class="project-tags">
+        <span>#HTML</span>
+        <span>#CSS</span>
+      </div>
+      <a href="#" class="btn-project">Mulai Proyek</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-badge">Menengah</div>
+      <h3>📱 Kalkulator Digital</h3>
+      <p>Asah logika pemrograman JavaScript kamu dengan membuat aplikasi kalkulator interaktif yang bisa menghitung operasi matematika secara otomatis.</p>
+      <div class="project-tags">
+        <span>#JavaScript</span>
+        <span>#DOM</span>
+      </div>
+      <a href="#" class="btn-project">Mulai Proyek</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-badge">Pemula</div>
+      <h3>🛍️ Landing Page Toko Online</h3>
+      <p>Desain halaman penjualan produk modern yang responsif dan rapi saat dibuka melalui handphone maupun laptop.</p>
+      <div class="project-tags">
+        <span>#CSSGrid</span>
+        <span>#Flexbox</span>
+      </div>
+      <a href="#" class="btn-project">Mulai Proyek</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="resources" class="section reveal">
+  <h2>Rekomendasi Video Belajar</h2>
+  <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">
+    Tonton video pilihan dari YouTube berikut untuk memperdalam pemahaman visual teknismu.
+  </p>
+
+  <div class="resources-grid">
+    
+    <div class="resource-card">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+      <div class="resource-info">
+        <span class="channel-badge">🎥 Kelas HTML</span>
+        <h3>HTML Dasar untuk Pemula</h3>
+        <p>Panduan visual yang sangat mudah diikuti untuk memahami susunan tag dasar, elemen teks, dan struktur utama halaman web dari nol.</p>
+        <a href="https://youtube.com" target="_blank" class="btn-resource">Buka di YouTube ↗</a>
+      </div>
+    </div>
+
+    <div class="resource-card">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+      <div class="resource-info">
+        <span class="channel-badge">🎨 Kelas CSS</span>
+        <h3>Kuasai Layout Flexbox & Grid</h3>
+        <p>Cara cepat mendesain layout halaman website agar terlihat rapi dan otomatis menyesuaikan layar handphone tanpa pusing.</p>
+        <a href="https://youtube.com" target="_blank" class="btn-resource">Buka di YouTube ↗</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <section id="contact" class="section reveal">
+    <h2>Need Any Help <br> Contact Us</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" placeholder="Nama" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Pesan" rows="4" required></textarea>
+      <button class="btn">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2026 EduSprint • Belajar Cepat, Paham Tepat
+  </footer>
+
+  <div id="modal-html" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-html')">&times;</span>
+      <h2>HTML Dasar: Membuat Tombol</h2>
+      <p>HTML digunakan untuk membuat kerangka. Di bawah ini adalah contoh kode untuk membuat sebuah tombol sederhana.</p>
+      
+      <h4>Contoh Kode:</h4>
+      <pre><code>&lt;button&gt;Klik Saya!&lt;/button&gt;</code></pre>
+      
+      <h4>Hasil:</h4>
+      <div class="result-box">
+        <button style="padding: 10px; cursor: pointer;">Klik Saya!</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-css" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-css')">&times;</span>
+      <h2>CSS Dasar: Styling Tombol</h2>
+      <p>CSS digunakan untuk mempercantik HTML. Mari kita beri warna pada tombol tadi.</p>
+      
+      <h4>Contoh Kode:</h4>
+      <pre><code>button {
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+}</code></pre>
+      
+      <h4>Hasil:</h4>
+      <div class="result-box">
+        <button style="background-color: #3b82f6; color: white; border-radius: 8px; padding: 10px 20px; border: none;">Tombol Keren</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-js" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-js')">&times;</span>
+      <h2>JavaScript: Interaksi Peringatan</h2>
+      <p>JavaScript membuat website hidup. Mari kita buat tombol yang memunculkan peringatan saat diklik.</p>
+      
+      <h4>Contoh Kode:</h4>
+      <pre><code>&lt;button onclick="alert('Halo dari EduSprint!')"&gt;Sapa Saya&lt;/button&gt;</code></pre>
+      
+      <h4>Hasil:</h4>
+      <div class="result-box">
+        <button onclick="alert('Halo dari EduSprint!')" style="background-color: #8b5cf6; color: white; border-radius: 8px; padding: 10px 20px; border: none; cursor: pointer;">Sapa Saya</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

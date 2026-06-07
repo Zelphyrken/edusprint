@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSprint - Mulai Belajar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">EduSprint</div>
+    <div class="menu">
+      <a href="index.html">Beranda</a>
+      <a href="#materi">Materi</a>
+      
+      <a href="#contact">Kontak</a>
+    </div>
+  </nav>
+
+  <section class="hero reveal hero-small">
+    <h1>Mulai Belajar</h1>
+    <p>
+      Pilih materi singkat di bawah ini untuk belajar lebih cepat, lebih fokus,
+      dan lebih mudah dipahami.
+    </p>
+    <a href="#materi" class="btn">Lihat Materi</a>
+  </section>
+
+  <section id="materi" class="section reveal">
+    <h2>Materi Belajar</h2>
+
+    <div class="cards">
+      <div class="card">
+        <span>💻</span>
+        <h3>HTML Dasar</h3>
+        <p>Struktur halaman web, elemen, dan form.</p>
+      </div>
+
+      <div class="card">
+        <span>🎨</span>
+        <h3>CSS Dasar</h3>
+        <p>Mengatur warna, layout, dan tampilan modern.</p>
+      </div>
+
+      <div class="card">
+        <span>⚡</span>
+        <h3>JavaScript Dasar</h3>
+        <p>Menambahkan interaksi pada website.</p>
+      </div>
+    </div>
+  </section>
+<section id="quiz" class="section reveal">
+    <h2>Kuis Evaluasi</h2>
+
+    <div class="quiz-container">
+      
+      <div class="quiz-slide active">
+        <div class="quiz-card">
+          <p class="quiz-title">1. Apa kepanjangan HTML?</p>
+
+          <label class="option">
+            <input type="radio" name="q1" value="benar">
+            Hyper Text Markup Language
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="salah">
+            High Transfer Machine Language
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="salah">
+            Hyper Tool Mark Language
+          </label>
+
+          <button class="btn" onclick="checkQuiz('q1', 'result1')">Cek Jawaban</button>
+          <p id="result1" class="quiz-result"></p>
+        </div>
+      </div>
+
+      <div class="quiz-slide">
+        <div class="quiz-card">
+          <p class="quiz-title">2. CSS digunakan untuk?</p>
+
+          <label class="option">
+            <input type="radio" name="q2" value="benar">
+            Mengatur tampilan website
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="salah">
+            Menyimpan data server
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="salah">
+            Mengirim email otomatis
+          </label>
+
+          <button class="btn" onclick="checkQuiz('q2', 'result2')">Cek Jawaban</button>
+          <p id="result2" class="quiz-result"></p>
+        </div>
+      </div>
+
+      <div class="quiz-slide">
+        <div class="quiz-card">
+          <p class="quiz-title">3. JavaScript digunakan untuk </p>
+
+          <label class="option">
+            <input type="radio" name="q2" value="benar">
+            Mengatur tampilan website
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="salah">
+            Menyimpan data server
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="salah">
+            Mengirim email otomatis
+          </label>
+
+          <button class="btn" onclick="checkQuiz('q2', 'result2')">Cek Jawaban</button>
+          <p id="result2" class="quiz-result"></p>
+        </div>
+      </div>
+
+      <div class="quiz-slide">
+        <div class="quiz-card">
+          <p class="quiz-title">2. CSS digunakan untuk?</p>
+
+          <label class="option">
+            <input type="radio" name="q2" value="benar">
+            Mengatur tampilan website
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="salah">
+            Menyimpan data server
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="salah">
+            Mengirim email otomatis
+          </label>
+
+          <button class="btn" onclick="checkQuiz('q2', 'result2')">Cek Jawaban</button>
+          <p id="result2" class="quiz-result"></p>
+        </div>
+      </div>
+
+      <div class="quiz-slide">
+        <div class="quiz-card">
+          <p class="quiz-title">2. CSS digunakan untuk?</p>
+
+          <label class="option">
+            <input type="radio" name="q2" value="benar">
+            Mengatur tampilan website
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="salah">
+            Menyimpan data server
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="salah">
+            Mengirim email otomatis
+          </label>
+
+          <button class="btn" onclick="checkQuiz('q2', 'result2')">Cek Jawaban</button>
+          <p id="result2" class="quiz-result"></p>
+        </div>
+      </div>
+
+      <div class="quiz-nav">
+        <button class="btn-nav" id="prevBtn" onclick="changeSlide(-1)">❮ Sebelumnya</button>
+        <span id="slideIndicator">1 / 2</span>
+        <button class="btn-nav" id="nextBtn" onclick="changeSlide(1)">Selanjutnya ❯</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="section reveal">
+     <h2>Need Any Help <br> Contact Us</h2>
+
+    <form onsubmit="sendMessage(event)" class="contact-form">
+      <input type="text" placeholder="Nama" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Pesan" rows="4" required></textarea>
+      <button class="btn">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2026 EduSprint • Belajar Cepat, Paham Tepat
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

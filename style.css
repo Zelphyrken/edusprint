@@ -1,0 +1,670 @@
+:root {
+  /* CSS Variables make it super easy to change your theme later */
+  --bg-color: #0f172a;
+  --primary: #3b82f6;
+  --secondary: #8b5cf6;
+  --text-main: #ffffff;
+  --text-muted: #cbd5e1;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding-top: 80px;
+}
+
+/* --- NAVIGATION --- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.menu a {
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-left: 24px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: var(--text-main);
+}
+
+/* --- HERO SECTION --- */
+.hero, .hero-small {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 8%;
+  z-index: 1;
+}
+
+.hero { min-height: 100vh; }
+.hero-small { min-height: 55vh; }
+
+.hero::before, .hero-small::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./abstract-sciencece-or-technology-with-neon-light-and-empty-space-for-text-futuristic-background-vector.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; /* Slightly softer for better text readability */
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem); /* Responsive font size */
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 20px;
+  /* Gradient text effect for the main headline */
+  background: linear-gradient(to right, #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  max-width: 600px;
+  margin-bottom: 30px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5); /* Glow effect on hover */
+}
+
+/* --- SECTIONS & CARDS --- */
+.section {
+  padding: 100px 8%;
+}
+
+.section h2 {
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 30px;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 15px 30px -10px rgba(139, 92, 246, 0.3); /* Subtle purple glow */
+}
+
+.card span {
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* --- FORMS & QUIZ --- */
+form, .contact-form, .quiz-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 550px;
+  margin: 0 auto; /* Centers the form */
+}
+
+input, textarea {
+  padding: 16px;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  background: rgba(30, 41, 59, 0.7);
+  color: white;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* --- QUIZ SPECIFICS --- */
+.quiz-card {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+}
+
+.quiz-title {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.option:hover {
+  transform: translateX(6px);
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.option input {
+  margin-right: 15px;
+  margin-bottom: 0;
+  accent-color: var(--primary); /* Makes the radio button blue instead of default blue/gray */
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #64748b;
+  border-top: 1px solid var(--glass-border);
+  margin-top: 50px;
+}
+
+/* --- ANIMATIONS --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px); /* Increased slightly for a more noticeable fade-up */
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Smoother easing function */
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  
+  .section {
+    padding: 70px 5%;
+  }
+}
+
+/* --- NEW HERO LAYOUT --- */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left; /* Align text to the left now */
+}
+
+.hero-text p {
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--glass-border);
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: translateY(-10px);
+}
+
+/* --- ABOUT FEATURES CARDS --- */
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid var(--glass-border);
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+/* --- MATERI CARD INTERACTION --- */
+.card.clickable {
+  cursor: pointer;
+}
+
+/* --- MODAL (POP-UP) STYLES --- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--bg-color);
+  border: 1px solid var(--glass-border);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: slideDown 0.4s ease-out;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: var(--text-muted);
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: var(--text-main);
+}
+
+.modal-content h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+pre {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+  border: 1px solid var(--glass-border);
+  color: #a78bfa;
+}
+
+.result-box {
+  background: #ffffff; /* White background to see the result clearly */
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Update Responsive for Hero */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .hero-text {
+    text-align: center;
+  }
+}
+
+
+/* --- QUIZ SLIDER --- */
+.quiz-container {
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quiz-slide {
+  display: none; /* Hide all slides by default */
+  animation: fadeIn 0.5s ease;
+}
+
+.quiz-slide.active {
+  display: block; /* Only show the active slide */
+}
+
+/* Navigation Buttons Container */
+.quiz-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding: 0 10px;
+}
+
+.btn-nav {
+  background: rgba(30, 41, 59, 0.8);
+  color: var(--text-main);
+  border: 1px solid var(--glass-border);
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-nav:hover:not(:disabled) {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Dim the button when there are no more questions */
+.btn-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+#slideIndicator {
+  color: var(--text-muted);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+/* --- SECTION TUTORIAL PROYEK --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 35px 30px 30px 30px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 15px 30px -10px rgba(59, 130, 246, 0.2);
+}
+
+/* Badge Tingkat Kesulitan di kanan atas kartu */
+.project-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  margin-bottom: 12px;
+  color: #f8fafc;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Tag Tag Hashtag Kecil */
+.project-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.project-tags span {
+  font-size: 0.8rem;
+  color: #a78bfa;
+  background: rgba(139, 92, 246, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Tombol khusus di dalam kartu proyek */
+.btn-project {
+  display: block;
+  text-align: center;
+  padding: 12px 20px;
+  border: 1px solid var(--primary);
+  color: #60a5fa;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-project:hover {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* --- SECTION SUMBER BELAJAR (YOUTUBE CARDS) --- */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resource-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden; /* Sangat penting: Menjaga agar sudut video iframe ikut melengkung */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.resource-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 15px 30px -10px rgba(139, 92, 246, 0.2);
+}
+
+/* Wadah Penampung Iframe Biar Responsif Otomatis */
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Menjaga rasio video youtube biar ga gepeng/terpotong */
+  background: #000;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.resource-info {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1; /* Memastikan ruang tinggi kartu seimbang */
+}
+
+.channel-badge {
+  align-self: flex-start;
+  background: rgba(139, 92, 246, 0.15);
+  color: #c084fc;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.resource-info h3 {
+  font-size: 1.2rem;
+  color: #f8fafc;
+}
+
+.resource-info p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Tombol Tautan Keluar Ke YouTube */
+.btn-resource {
+  margin-top: auto; /* Memaksa posisi tombol selalu presisi di baris paling bawah kartu */
+  text-align: center;
+  padding: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  transition: 0.3s;
+}
+
+.btn-resource:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+  border-color: var(--text-muted);
+}
